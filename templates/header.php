@@ -10,7 +10,7 @@ if (session_status() == PHP_SESSION_NONE) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo isset($page_title) ? $page_title . ' - 我的虚拟宠物' : '我的虚拟宠物'; ?></title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <?php if (isset($extra_css)): ?>
         <?php foreach ($extra_css as $css): ?>
             <link rel="stylesheet" href="<?php echo $css; ?>">
