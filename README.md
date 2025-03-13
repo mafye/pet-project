@@ -8,13 +8,13 @@
 
 ### 主要功能
 
-- 用户注册和登录系统
-- 创建和自定义宠物
-- 宠物互动（喂食、玩耍、睡觉等）
-- 宠物状态系统（饥饿度、心情、健康等）
-- 多样化的宠物反馈
-- 宠物成长系统
-- 物品商店
+- 用户注册和登录系统 ✅
+- 创建和自定义宠物 ✅
+- 宠物互动（喂食、玩耍、睡觉等）✅
+- 宠物状态系统（饥饿度、心情、健康等）✅
+- 多样化的宠物反馈 🚧
+- 宠物成长系统 ✅
+- 物品商店 🚧
 
 ## 技术架构
 
@@ -27,40 +27,41 @@
 
 ```
 pet_project/
-├── index.php                 # 入口文件/登录页面
-├── register.php              # 注册页面
-├── dashboard.php             # 用户仪表板/宠物选择
-├── pet.php                   # 宠物互动主界面
-├── shop.php                  # 宠物商店
-├── profile.php               # 用户资料
-├── README.md                 # 项目说明
+├── index.php                 # 入口文件/登录页面 ✅
+├── register.php              # 注册页面 ✅
+├── dashboard.php             # 用户仪表板/宠物选择 ✅
+├── logout.php                # 退出登录 ✅
+├── pet.php                   # 宠物互动主界面 ✅
+├── shop.php                  # 宠物商店 🚧
+├── profile.php               # 用户资料 🚧
+├── README.md                 # 项目说明 ✅
+├── database.sql              # 数据库结构 ✅
 ├── config/
-│   └── db.php                # 数据库配置
+│   └── db.php                # 数据库配置 ✅
 ├── includes/
-│   ├── functions.php         # 通用函数
-│   ├── User.php              # 用户类
-│   ├── Pet.php               # 宠物类
-│   ├── PetResponse.php       # 宠物反馈类
-│   └── Item.php              # 物品类
+│   ├── functions.php         # 通用函数 ✅
+│   ├── User.php              # 用户类 ✅
+│   ├── Pet.php               # 宠物类 ✅
+│   ├── PetResponse.php       # 宠物反馈类 🚧
+│   └── Item.php              # 物品类 🚧
 ├── assets/
 │   ├── css/
-│   │   ├── style.css         # 主样式表
-│   │   └── pet.css           # 宠物相关样式
+│   │   └── styles.css        # 主样式表 ✅
 │   ├── js/
-│   │   ├── main.js           # 主脚本
-│   │   └── pet.js            # 宠物互动脚本
+│   │   ├── main.js           # 主脚本 🚧
+│   │   └── pet.js            # 宠物互动脚本 ✅
 │   └── images/
-│       ├── pets/             # 宠物图像
-│       └── items/            # 物品图像
+│       ├── pets/             # 宠物图像 🚧
+│       └── items/            # 物品图像 🚧
 └── templates/
-    ├── header.php            # 页头模板
-    ├── footer.php            # 页脚模板
-    └── pet_display.php       # 宠物显示模板
+    ├── header.php            # 页头模板 ✅
+    ├── footer.php            # 页脚模板 ✅
+    └── pet_display.php       # 宠物显示模板 🚧
 ```
 
 ## 数据库设计
 
-### users表
+### users表 ✅
 ```sql
 CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -73,7 +74,7 @@ CREATE TABLE users (
 );
 ```
 
-### pets表
+### pets表 ✅
 ```sql
 CREATE TABLE pets (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -92,7 +93,7 @@ CREATE TABLE pets (
 );
 ```
 
-### pet_responses表
+### pet_responses表 ✅
 ```sql
 CREATE TABLE pet_responses (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -104,7 +105,7 @@ CREATE TABLE pet_responses (
 );
 ```
 
-### items表
+### items表 ✅
 ```sql
 CREATE TABLE items (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -118,7 +119,7 @@ CREATE TABLE items (
 );
 ```
 
-### user_items表
+### user_items表 ✅
 ```sql
 CREATE TABLE user_items (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -131,7 +132,7 @@ CREATE TABLE user_items (
 );
 ```
 
-### interactions表
+### interactions表 ✅
 ```sql
 CREATE TABLE interactions (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -143,39 +144,46 @@ CREATE TABLE interactions (
 );
 ```
 
-## 开发路线图
+## 项目进度
 
-1. **阶段1: 基础框架**
-   - 设置数据库
-   - 创建基本文件结构
-   - 实现用户注册/登录
+- ✅ 完成
+- 🚧 开发中
+- ⏳ 计划中
 
-2. **阶段2: 宠物系统核心**
-   - 宠物创建
-   - 基本属性系统
-   - 简单互动功能
+### 当前进度
 
-3. **阶段3: 互动与反馈**
-   - 实现多样化反馈
-   - 宠物状态变化
-   - 成长系统
+1. **基础框架** ✅
+   - 设置数据库 ✅
+   - 创建基本文件结构 ✅
+   - 实现用户注册/登录 ✅
 
-4. **阶段4: 扩展功能**
-   - 商店系统
-   - 物品效果
-   - 成就系统
+2. **宠物系统核心** ✅
+   - 宠物类实现 ✅
+   - 宠物创建 ✅
+   - 基本属性系统 ✅
+   - 简单互动功能 ✅
 
-5. **阶段5: 优化与完善**
-   - 界面美化
-   - 用户体验改进
-   - 性能优化
+3. **互动与反馈** 🚧
+   - 实现多样化反馈 🚧
+   - 宠物状态变化 ✅
+   - 成长系统 ✅
+
+4. **扩展功能** ⏳
+   - 商店系统 ⏳
+   - 物品效果 ⏳
+   - 成就系统 ⏳
+
+5. **优化与完善** ⏳
+   - 界面美化 🚧
+   - 用户体验改进 ⏳
+   - 性能优化 ⏳
 
 ## 安装说明
 
 1. 克隆仓库到XAMPP的htdocs目录
-2. 创建MySQL数据库
-3. 导入数据库结构（使用项目中的SQL文件）
-4. 配置config/db.php文件
+2. 创建MySQL数据库 `pet_project`
+3. 导入数据库结构（使用项目中的database.sql文件）
+4. 配置config/db.php文件中的数据库连接信息
 5. 访问http://localhost/pet_project/
 
 ## 贡献者
@@ -184,4 +192,4 @@ CREATE TABLE interactions (
 
 ## 许可证
 
-[选择一个许可证，如MIT]
+MIT许可证

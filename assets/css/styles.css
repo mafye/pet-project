@@ -221,3 +221,194 @@ footer {
     color: #4a6fa5;
     margin-bottom: 15px;
 }
+
+/* 宠物页面样式 */
+.pet-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.pet-selector {
+    margin-bottom: 30px;
+}
+
+.pet-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.pet-tab {
+    padding: 8px 15px;
+    background-color: #e3f2fd;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #4a6fa5;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.pet-tab:hover {
+    background-color: #bbdefb;
+}
+
+.pet-tab.active {
+    background-color: #4a6fa5;
+    color: white;
+}
+
+.pet-tab.add-pet {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.pet-tab.add-pet:hover {
+    background-color: #c8e6c9;
+}
+
+.pet-display {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.pet-avatar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pet-avatar img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 10px;
+}
+
+.pet-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pet-info h2 {
+    color: #4a6fa5;
+    margin-bottom: 10px;
+}
+
+.pet-response {
+    background-color: #fff9c4;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+    font-style: italic;
+    border-left: 4px solid #ffd54f;
+}
+
+.pet-status {
+    margin-bottom: 30px;
+}
+
+.status-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.status-bar label {
+    width: 80px;
+    margin-bottom: 0;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 15px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 10px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+}
+
+.status-bar:nth-child(1) .progress {
+    background-color: #ff9800; /* 饥饿度 - 橙色 */
+}
+
+.status-bar:nth-child(2) .progress {
+    background-color: #f44336; /* 心情 - 红色 */
+}
+
+.status-bar:nth-child(3) .progress {
+    background-color: #2196f3; /* 能量 - 蓝色 */
+}
+
+.status-bar:nth-child(4) .progress {
+    background-color: #4caf50; /* 健康 - 绿色 */
+}
+
+.pet-actions {
+    margin-bottom: 30px;
+}
+
+.pet-actions h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #4a6fa5;
+}
+
+.pet-actions .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.pet-actions .action-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 2px solid #e3f2fd;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.pet-actions .action-button:hover {
+    transform: translateY(-5px);
+    border-color: #bbdefb;
+}
+
+.pet-actions .action-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.pet-history {
+    text-align: center;
+}
+
+.pet-history h3 {
+    color: #4a6fa5;
+    margin-bottom: 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.button-secondary {
+    background-color: #9e9e9e;
+    margin-left: 10px;
+}
+
+.button-secondary:hover {
+    background-color: #757575;
+}
