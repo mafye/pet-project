@@ -412,3 +412,16 @@ footer {
 .button-secondary:hover {
     background-color: #757575;
 }
+
+.pet-emoji {
+    font-size: 100px;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.pet-emoji:hover {
+    transform: scale(1.1);
+}

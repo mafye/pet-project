@@ -190,13 +190,9 @@ include 'templates/header.php';
             <div class="pet-display">
                 <div class="pet-avatar">
                     <?php
-                    $pet_type = $current_pet['type'];
-                    $pet_image = "assets/images/pets/{$pet_type}.png";
-                    if (!file_exists($pet_image)) {
-                        $pet_image = "assets/images/pets/default.png";
-                    }
+                    $pet_emoji = $pet_manager->getPetEmoji($current_pet['id']);
                     ?>
-                    <img src="<?php echo $pet_image; ?>" alt="<?php echo htmlspecialchars($current_pet['name']); ?>">
+                    <div class="pet-emoji"><?php echo $pet_emoji; ?></div>
                 </div>
                 
                 <div class="pet-info">
