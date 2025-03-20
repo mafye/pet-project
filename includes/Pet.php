@@ -151,6 +151,35 @@ class Pet {
         
         return $result;
     }
+
+    public function getPetEmoji() {
+        // Determine the pet's primary state based on its lowest attribute
+        $lowestAttribute = min($this->hunger, $this->happiness, $this->energy, $this->health);
+        
+        // Return emoji based on the pet's state
+        if ($lowestAttribute <= 20) {
+            // Critical state
+            if ($this->hunger <= 20) return "😫"; // Very hungry
+            if ($this->happiness <= 20) return "😭"; // Very sad
+            if ($this->energy <= 20) return "😴"; // Very tired
+            if ($this->health <= 20) return "🤒"; // Very sick
+        } else if ($lowestAttribute <= 50) {
+            // Concerning state
+            if ($this->hunger <= 50) return "😕"; // Hungry
+            if ($this->happiness <= 50) return "😔"; // Sad
+            if ($this->energy <= 50) return "😩"; // Tired
+            if ($this->health <= 50) return "😷"; // Sick
+        } else if ($lowestAttribute <= 80) {
+            // Okay state
+            return "😊"; // Content
+        } else {
+            // Great state
+            return "😁"; // Very happy
+        }
+        
+        // Default emoji if no conditions are met
+        return "🐾";
+    }
     
     // 记录互动
     private function recordInteraction($petId, $actionType, $pointsEarned) {
