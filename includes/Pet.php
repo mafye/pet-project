@@ -47,6 +47,48 @@ class Pet {
             return false;
         }
     }
+
+    public function getPetEmoji($petId) {
+        // 获取宠物数据
+        $pet = $this->getPetById($petId);
+        
+        if (!$pet) {
+            return "❓"; // 如果找不到宠物，返回问号表情
+        }
+        
+        // 使用从数据库获取的宠物数据
+        $hunger = $pet['hunger'];
+        $happiness = $pet['happiness'];
+        $energy = $pet['energy'];
+        $health = $pet['health'];
+        
+        // 确定宠物的主要状态基于其最低属性
+        $lowestAttribute = min($hunger, $happiness, $energy, $health);
+        
+        // 根据宠物状态返回表情
+        if ($lowestAttribute <= 20) {
+            // 危急状态
+            if ($hunger <= 20) return "😫"; // 非常饥饿
+            if ($happiness <= 20) return "😭"; // 非常悲伤
+            if ($energy <= 20) return "😴"; // 非常疲倦
+            if ($health <= 20) return "🤒"; // 非常生病
+        } else if ($lowestAttribute <= 50) {
+            // 令人担忧的状态
+            if ($hunger <= 50) return "😕"; // 饥饿
+            if ($happiness <= 50) return "😔"; // 悲伤
+            if ($energy <= 50) return "😩"; // 疲倦
+            if ($health <= 50) return "😷"; // 生病
+        } else if ($lowestAttribute <= 80) {
+            // 一般状态
+            return "😊"; // 满足
+        } else {
+            // 很好的状态
+            return "😁"; // 非常开心
+        }
+        
+        // 如果没有满足任何条件，返回默认表情
+        return "🐾";
+    }
     
     // 更新宠物状态
     public function updatePetStatus($petId, $data) {
